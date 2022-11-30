@@ -16,7 +16,6 @@ public class War
     {
         // Initializations here...
         
-        
         // ...then run the event loop
         this.runEventLoop();
     }
