@@ -15,6 +15,8 @@ public class War
     public War()
     {
         // Initializations here...
+        Deck deck = new deck();
+        Card card = new card();
         
         // ...then run the event loop
         this.runEventLoop();

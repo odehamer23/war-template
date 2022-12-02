@@ -1,6 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Random;
 /**
  * Emulate a deck of cards
  *
@@ -46,9 +46,13 @@ public class Deck
      * Shuffles the cards in the deck
      */
     public void shuffle() {
-    
-        Collections.shuffle(cards);
-        
+        Random rand = new Random();
+        for (int i = 0; i<52; i++) { 
+            int r = rand.nextInt(52);
+            Card temp = cards.get(i);
+            cards.replace(i, cards.get(r));
+            cards.replace(r, temp);
+        }
         // To be written
     }
     
@@ -75,7 +79,9 @@ public class Deck
      */
     public Card dealCardFromDeck() {
         // To be written 
-        return null;
+        Card card1 = cards.get(0);
+        cards.remove(0);
+        return card1;
     }
     
     /**
@@ -83,6 +89,7 @@ public class Deck
      * @param cardToAdd: Card to add to this deck
      */
     public void addCardToDeck(Card cardToAdd) {
+        .add(cardToAdd);
         // To be written
     }
     
