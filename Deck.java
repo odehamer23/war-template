@@ -50,8 +50,8 @@ public class Deck
         for (int i = 0; i<52; i++) { 
             int r = rand.nextInt(52);
             Card temp = cards.get(i);
-            cards.replace(i, cards.get(r));
-            cards.replace(r, temp);
+            cards.set(i, cards.get(r));
+            cards.set(r, temp);
         }
         // To be written
     }
@@ -89,7 +89,7 @@ public class Deck
      * @param cardToAdd: Card to add to this deck
      */
     public void addCardToDeck(Card cardToAdd) {
-        .add(cardToAdd);
+        this.cards.add(cardToAdd);
         // To be written
     }
     
